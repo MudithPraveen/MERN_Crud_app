@@ -11,8 +11,8 @@ mongoose.connect(DB_URL)  //connnect db
 .then(() =>{  //if success
     console.log('DB Connected');
 })
-.catch((err) =>{ // if not success
-    console.log('DB connection error',err);
+.catch((er) =>{ // if not success catch the error
+    console.log('DB connection error',er);
 });
 
 app.listen(PORT, () =>{     //app is listen where want to run port
