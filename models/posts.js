@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const postSchema = new mongoose.Schema({       //create schema
+const postSchema = new mongoose.Schema({       //create schema for mongoDB
     topic:{
         type:String,
         required:true
@@ -15,4 +15,4 @@ const postSchema = new mongoose.Schema({       //create schema
     }
 });
 
-module.exports = mongoose.model('Posts',postSchema);  // export the schema
+module.exports = mongoose.model('Posts',postSchema);  // export the schema to get from routes
