@@ -18,3 +18,5 @@ router.post('/post/save',(req,res)=>{
         });
     });
 });
+
+module.exports = router;

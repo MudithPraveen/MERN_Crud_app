@@ -1,7 +1,16 @@
 const express = require('express'); //express import
 const mongoose = require('mongoose'); // import mongoose
+const bodyParser = require('body-parser');  //information get to server as json format, so we have to convert in to javascript opject using body paser
 
 const app = express(); //express invok to our app
+
+//imports routs
+const postRoutes = require('./routes/posts');
+
+app.use(bodyParser.json()); //app middleware
+
+app.use(postRoutes);//routes middleware
+
 
 const PORT = 8000; //running port
 
